@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>story nest - Privacy Policy</title>
+    <title>storynest — Privacy Policy & Terms of Service</title>
     <style>
         * {
             margin: 0;
@@ -11,258 +11,451 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --bg: #0A3323;
+            --surface: #0F4A32;
+            --card: #1A5C40;
+            --text: #F7F4D5;
+            --moss: #839958;
+            --accent: #D3968C;
+            --muted: rgba(247, 244, 213, 0.55);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Rounded', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #2D2D2D;
+            background-color: #F5F2E8;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+        /* ── Header ── */
+        .site-header {
+            background: var(--bg);
+            padding: 48px 24px 40px;
+            text-align: center;
         }
 
-        header {
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #0A3323;
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: -0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        h1 {
-            color: #0A3323;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            font-weight: 600;
+        .logo-moon {
+            font-size: 1.6rem;
         }
 
-        .subtitle {
-            color: #666;
-            font-size: 1rem;
+        .header-tagline {
+            color: var(--moss);
+            font-size: 0.95rem;
+            margin-top: 8px;
             font-weight: 400;
         }
 
-        h2 {
-            color: #0A3323;
-            font-size: 1.5rem;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #f0f0f0;
+        /* ── Nav ── */
+        .nav {
+            background: var(--surface);
+            padding: 0 24px;
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+        }
+
+        .nav a {
+            display: inline-block;
+            padding: 14px 20px;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            color: var(--text);
+            border-bottom-color: var(--accent);
+        }
+
+        /* ── Main layout ── */
+        .page {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        /* ── Section blocks ── */
+        .doc-section {
+            padding: 60px 0 20px;
+        }
+
+        .doc-section-title {
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: var(--bg);
+            padding-bottom: 14px;
+            border-bottom: 3px solid var(--bg);
+            margin-bottom: 10px;
+        }
+
+        .doc-meta {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 32px;
         }
 
         h3 {
-            color: #0A3323;
-            font-size: 1.15rem;
+            color: var(--bg);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 32px 0 10px;
+        }
+
+        h3:first-of-type {
             margin-top: 20px;
-            margin-bottom: 10px;
-            font-weight: 600;
         }
 
         p {
-            margin-bottom: 15px;
-            text-align: justify;
+            margin-bottom: 14px;
+            color: #3A3A3A;
         }
 
-        ul {
-            margin-left: 25px;
-            margin-bottom: 15px;
+        ul, ol {
+            margin: 0 0 16px 22px;
         }
 
         li {
-            margin-bottom: 8px;
+            margin-bottom: 7px;
+            color: #3A3A3A;
+        }
+
+        strong {
+            color: #1A1A1A;
         }
 
         a {
-            color: #0A3323;
-            text-decoration: none;
-            font-weight: 500;
-            border-bottom: 1px solid #0A3323;
+            color: var(--bg);
+            text-decoration: underline;
+            text-underline-offset: 2px;
         }
 
         a:hover {
-            opacity: 0.7;
+            color: var(--moss);
         }
 
-        .highlight {
-            background-color: #f9f9f9;
-            border-left: 4px solid #0A3323;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
+        /* ── Callout boxes ── */
+        .callout {
+            background: #EEF5EC;
+            border-left: 4px solid var(--bg);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0 24px;
         }
 
-        .contact-info {
-            background-color: #f0f8f5;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
+        .callout p:last-child {
+            margin-bottom: 0;
         }
 
-        .last-updated {
+        .callout-warning {
+            background: #FDF3F1;
+            border-left-color: var(--accent);
+        }
+
+        /* ── Contact card ── */
+        .contact-card {
+            background: var(--bg);
+            color: var(--text);
+            border-radius: 16px;
+            padding: 28px 32px;
+            margin-top: 20px;
+        }
+
+        .contact-card p {
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .contact-card strong {
+            color: var(--moss);
+        }
+
+        .contact-card a {
+            color: var(--accent);
+        }
+
+        /* ── Divider ── */
+        .page-divider {
+            border: none;
+            border-top: 2px dashed #D9D4BF;
+            margin: 20px 0 0;
+        }
+
+        /* ── Footer ── */
+        .site-footer {
+            background: var(--bg);
+            color: var(--muted);
             text-align: center;
-            color: #999;
-            font-size: 0.9rem;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
+            padding: 32px 24px;
+            font-size: 0.85rem;
         }
 
+        .site-footer a {
+            color: var(--moss);
+        }
+
+        /* ── Responsive ── */
         @media (max-width: 600px) {
-            .container {
-                padding: 15px;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.3rem;
-            }
-
-            h3 {
-                font-size: 1.05rem;
-            }
+            .logo { font-size: 1.6rem; }
+            .doc-section-title { font-size: 1.35rem; }
+            .nav a { padding: 12px 12px; font-size: 0.82rem; }
+            .contact-card { padding: 20px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>story nest</h1>
-            <p class="subtitle">Privacy Policy</p>
-        </header>
 
-        <section>
-            <h2>Our Commitment to Your Privacy</h2>
-            <p>At story nest, we believe in building trust with parents who use our app to create magical voice experiences for their children. This privacy policy explains what information we collect, how we use it, and how we protect your family's privacy. We've written this in plain language so you can understand exactly how your data is handled.</p>
-        </section>
-
-        <section>
-            <h2>What Data We Collect</h2>
-            <p>story nest collects minimal information needed to create personalized narrations:</p>
-            <ul>
-                <li><strong>Voice Recordings:</strong> When you record your voice for voice cloning, we securely process these recordings through ElevenLabs (our voice processing partner) to create a voice model that sounds like you.</li>
-                <li><strong>App Usage Preferences:</strong> We store your app settings locally on your device, such as preferred story categories, playback settings, and other choices you make while using story nest.</li>
-            </ul>
-            <p>We do not collect your name, email address, location, contacts, or any other personal information. We do not create accounts or require you to sign in.</p>
-        </section>
-
-        <section>
-            <h2>How We Use Voice Data</h2>
-            <div class="highlight">
-                <p><strong>Your voice recordings are sent only to ElevenLabs for voice cloning purposes.</strong> We do not store voice samples on our servers or use them for any other purpose. Once ElevenLabs creates your voice clone model, the original recording is deleted.</p>
-            </div>
-            <p>Here's how the process works:</p>
-            <ul>
-                <li>You record your voice within the story nest app</li>
-                <li>The recording is securely sent to ElevenLabs' servers for voice model training</li>
-                <li>ElevenLabs uses AI to create a digital clone of your voice</li>
-                <li>Your voice clone is used to narrate children's stories in your voice</li>
-                <li>The final narrated story is saved only on your device</li>
-                <li>Original voice samples are not retained by story nest</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>ElevenLabs as Our Voice Processing Partner</h2>
-            <p>story nest uses ElevenLabs' API to process voice recordings and generate voice-cloned narrations. ElevenLabs is a trusted third-party service that handles voice data according to their own privacy practices.</p>
-            <p>For details about how ElevenLabs uses and protects voice data, please review their privacy policy at <a href="https://elevenlabs.io/privacy" target="_blank">https://elevenlabs.io/privacy</a>.</p>
-            <p>We recommend reviewing ElevenLabs' privacy terms before recording your voice. If you have concerns about their practices, you can contact us before proceeding.</p>
-        </section>
-
-        <section>
-            <h2>Local Storage on Your Device</h2>
-            <p>All processed content stays on your iPhone. Specifically:</p>
-            <ul>
-                <li><strong>Narrated Stories:</strong> Generated stories with your voice are stored only on your device</li>
-                <li><strong>Preferences:</strong> App settings and preferences are stored locally using iOS UserDefaults</li>
-                <li><strong>No Cloud Backup:</strong> We do not back up your stories or preferences to cloud servers</li>
-                <li><strong>Full Control:</strong> You can delete any story or clear all data at any time directly from the app</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>We Don't Sell Your Data</h2>
-            <p>We want to be crystal clear: we do not sell, trade, rent, or share your voice recordings, app preferences, or any other personal information with third parties for marketing or any other purpose. Your data belongs to you.</p>
-            <p>The only exception is ElevenLabs, which we use to process voice data as described above. We do not share data with any other third parties.</p>
-        </section>
-
-        <section>
-            <h2>Children's Privacy & COPPA Compliance</h2>
-            <p><strong>Important note:</strong> story nest is designed for use by parents, not children. Parents record their own voices and control the app. While the generated stories are created for children to enjoy, the app does not collect any information from children directly.</p>
-            <p>We are compliant with the Children's Online Privacy Protection Act (COPPA) because:</p>
-            <ul>
-                <li>Parents operate the app and record their own voices</li>
-                <li>We do not collect personal information from children</li>
-                <li>We do not track or identify children using the app</li>
-                <li>Children are listeners, not data subjects in our system</li>
-            </ul>
-            <p>If you have any concerns about children's privacy while using story nest, please contact us.</p>
-        </section>
-
-        <section>
-            <h2>In-App Purchases & Payment Data</h2>
-            <p>story nest uses Apple's in-app purchase system for subscriptions. When you make a purchase:</p>
-            <ul>
-                <li><strong>Apple Handles Payments:</strong> Your credit card, Apple ID, and billing information are processed directly by Apple, not by us</li>
-                <li><strong>We Don't See Payment Details:</strong> story nest never receives or stores your payment information</li>
-                <li><strong>Apple's Privacy:</strong> For details about how Apple handles your payment data, review <a href="https://www.apple.com/privacy/" target="_blank">Apple's Privacy Policy</a></li>
-            </ul>
-            <p>We only receive information from Apple about whether your subscription is active, so we can enable premium features in the app.</p>
-        </section>
-
-        <section>
-            <h2>Data Retention & Deletion</h2>
-            <p>You have full control over your data in story nest:</p>
-            <ul>
-                <li>You can delete any narrated story at any time</li>
-                <li>You can clear all app data by uninstalling the app</li>
-                <li>Your voice model with ElevenLabs can be deleted by contacting ElevenLabs directly</li>
-                <li>Voice preferences stored locally are removed when you clear the app data</li>
-            </ul>
-            <p>If you'd like assistance with data deletion or have questions, please contact us at the address below.</p>
-        </section>
-
-        <section>
-            <h2>Security & Data Protection</h2>
-            <p>We take the security of your voice recordings seriously. Here's how we protect your data:</p>
-            <ul>
-                <li>Voice recordings are encrypted during transmission to ElevenLabs</li>
-                <li>We do not store voice recordings on our servers</li>
-                <li>App preferences are stored securely on your device using iOS standard encryption</li>
-                <li>We regularly review our security practices to keep your information safe</li>
-            </ul>
-            <p>However, no method of transmission over the internet is 100% secure. While we work hard to protect your information, we cannot guarantee absolute security.</p>
-        </section>
-
-        <section>
-            <h2>Third-Party Links</h2>
-            <p>This privacy policy includes links to ElevenLabs' and Apple's privacy policies. We are not responsible for the practices of these third parties. We encourage you to review their privacy policies independently.</p>
-        </section>
-
-        <section>
-            <h2>Changes to This Privacy Policy</h2>
-            <p>We may update this privacy policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of material changes by updating the "Last Updated" date below. Your continued use of story nest after changes means you accept the updated policy.</p>
-        </section>
-
-        <section>
-            <h2>Contact Us</h2>
-            <div class="contact-info">
-                <p><strong>Questions about our privacy practices?</strong> We're here to help.</p>
-                <p>
-                    <strong>Developer:</strong> Kennedy Anderson<br>
-                    <strong>Email:</strong> <a href="mailto:kennedy.anderson@wonderistagency.com">kennedy.anderson@wonderistagency.com</a>
-                </p>
-                <p>If you have any concerns about your privacy while using story nest, or if you'd like to request data deletion or other privacy-related assistance, please reach out. We'll respond to your inquiry promptly.</p>
-            </div>
-        </section>
-
-        <div class="last-updated">
-            <p>Last Updated: April 9, 2026</p>
-        </div>
+<header class="site-header">
+    <div class="logo">
+        <span class="logo-moon">🌙</span>
+        storynest
     </div>
+    <p class="header-tagline">Bedtime stories in your voice</p>
+</header>
+
+<nav class="nav">
+    <a href="#privacy">Privacy Policy</a>
+    <a href="#terms">Terms of Service</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main class="page">
+
+    <!-- ════════════════════════════════════════════
+         PRIVACY POLICY
+    ═════════════════════════════════════════════ -->
+    <section class="doc-section" id="privacy">
+        <h2 class="doc-section-title">Privacy Policy</h2>
+        <p class="doc-meta">Effective date: April 23, 2026 &nbsp;·&nbsp; Last updated: April 23, 2026</p>
+
+        <p>storynest ("we," "us," or "our") is a mobile application that lets parents record their voice so children can hear bedtime stories narrated by someone they love. We take your privacy seriously and have written this policy in plain language so you always know exactly how your information is handled.</p>
+
+        <h3>1. Who We Are</h3>
+        <p>storynest is developed and operated by Kennedy Anderson, an independent developer. We can be reached at <a href="mailto:storynest.hello@gmail.com">storynest.hello@gmail.com</a>.</p>
+
+        <h3>2. Information We Collect</h3>
+        <p>We collect only what is necessary to make the app work:</p>
+        <ul>
+            <li><strong>Voice recordings.</strong> When you record your voice in-app, that recording is transmitted to ElevenLabs (our AI voice processing partner) to generate a cloned voice model. We do not retain the original recording on our own servers.</li>
+            <li><strong>App settings and preferences.</strong> Things like playback speed, sleep timer settings, accent color, and child profiles are stored locally on your device using iOS standard storage (UserDefaults). We have no access to this data.</li>
+            <li><strong>Subscription status.</strong> We receive a signal from Apple's StoreKit confirming whether your subscription is active. We never see your payment details, Apple ID, or billing information.</li>
+            <li><strong>Notification permission.</strong> If you enable bedtime reminders, iOS stores your permission locally. We do not collect or transmit this information.</li>
+        </ul>
+        <p>We do <strong>not</strong> collect your name, email address, location, contacts, photos, device identifiers, or browsing history. There are no user accounts and no sign-in.</p>
+
+        <h3>3. Voice Data &amp; ElevenLabs</h3>
+        <div class="callout">
+            <p><strong>Your voice recording is sent to ElevenLabs solely to create a voice model.</strong> storynest does not store your voice on its own servers. Once ElevenLabs has created the voice model, the original audio sample is deleted by ElevenLabs in accordance with their data retention policies.</p>
+        </div>
+        <p>Here is the full flow:</p>
+        <ol>
+            <li>You record your voice inside storynest.</li>
+            <li>The recording is transmitted over an encrypted HTTPS connection to ElevenLabs' API.</li>
+            <li>ElevenLabs uses the recording to train a voice model uniquely associated with your device.</li>
+            <li>storynest calls ElevenLabs to generate story narrations using that voice model.</li>
+            <li>Generated audio files are saved only on your device.</li>
+        </ol>
+        <p>ElevenLabs is a third-party service with its own privacy practices. We strongly encourage you to review their policy at <a href="https://elevenlabs.io/privacy" target="_blank" rel="noopener noreferrer">elevenlabs.io/privacy</a> before recording your voice.</p>
+        <p>To delete your voice model from ElevenLabs, you may contact them directly through their support channels or through the storynest app (which sends a deletion request on your behalf).</p>
+
+        <h3>4. Children's Privacy (COPPA)</h3>
+        <p>storynest is designed to be operated by <strong>parents and caregivers</strong>, not by children. The app does not knowingly collect personal information from children under 13.</p>
+        <ul>
+            <li>Parents record their own voice and control the app.</li>
+            <li>Children are listeners — they are not asked to enter information, create profiles, or interact with data-collection features.</li>
+            <li>Child profile names and emoji (created by parents) are stored locally on the parent's device only and are never transmitted to us or any third party.</li>
+        </ul>
+        <p>If you believe we have inadvertently collected information from a child under 13, please contact us immediately at <a href="mailto:storynest.hello@gmail.com">storynest.hello@gmail.com</a> and we will take prompt corrective action.</p>
+
+        <h3>5. How We Use Your Information</h3>
+        <p>We use the information described above only to:</p>
+        <ul>
+            <li>Generate voice-cloned story narrations (via ElevenLabs).</li>
+            <li>Save your preferences and stories locally on your device.</li>
+            <li>Confirm your subscription status to unlock premium features.</li>
+            <li>Send bedtime reminder notifications (only if you enable this).</li>
+        </ul>
+        <p>We do not use your information for advertising, analytics profiling, or any purpose beyond operating the app.</p>
+
+        <h3>6. Data Storage</h3>
+        <p>All generated narrations and preferences are stored <strong>locally on your device</strong>. storynest does not operate cloud servers or databases. If you delete the app, all locally stored data is removed. To also remove your voice model from ElevenLabs, follow the voice deletion steps in the app or contact ElevenLabs directly.</p>
+
+        <h3>7. Third Parties</h3>
+        <p>storynest works with the following third parties:</p>
+        <ul>
+            <li><strong>ElevenLabs</strong> — voice processing and text-to-speech generation. See <a href="https://elevenlabs.io/privacy" target="_blank" rel="noopener noreferrer">their privacy policy</a>.</li>
+            <li><strong>Apple</strong> — in-app subscription management and payment processing. See <a href="https://www.apple.com/privacy/" target="_blank" rel="noopener noreferrer">Apple's privacy policy</a>.</li>
+        </ul>
+        <p>We do not share your data with any other third parties. We do not sell, rent, or trade your information.</p>
+
+        <h3>8. In-App Purchases &amp; Subscriptions</h3>
+        <p>Premium features are available via a monthly subscription processed entirely by Apple. We never see or store your payment method, credit card number, or Apple ID. We receive only a confirmation of your subscription status from Apple's StoreKit.</p>
+
+        <h3>9. Notifications</h3>
+        <p>If you enable bedtime reminders, the app uses iOS local notifications, which run entirely on your device. We do not use push notification services or remote servers to deliver reminders.</p>
+
+        <h3>10. Security</h3>
+        <p>We take reasonable measures to protect the information handled in connection with the app:</p>
+        <ul>
+            <li>All communication with ElevenLabs uses HTTPS (TLS encryption).</li>
+            <li>storynest's App Transport Security settings are locked to only permit connections to api.elevenlabs.io, blocking all other unencrypted traffic.</li>
+            <li>Locally stored data is protected by iOS device encryption.</li>
+        </ul>
+        <p>No method of transmission or storage is 100% secure. While we take reasonable precautions, we cannot guarantee absolute security.</p>
+
+        <h3>11. Your Rights</h3>
+        <p>Depending on where you live, you may have rights regarding your personal data. To the extent any data is collected, you may:</p>
+        <ul>
+            <li>Request deletion of your ElevenLabs voice model.</li>
+            <li>Delete all locally stored app data by uninstalling the app.</li>
+            <li>Contact us with any privacy-related questions or concerns.</li>
+        </ul>
+        <p>For requests, email us at <a href="mailto:storynest.hello@gmail.com">storynest.hello@gmail.com</a> and we will respond within 30 days.</p>
+
+        <h3>12. Changes to This Policy</h3>
+        <p>We may update this privacy policy periodically. If we make material changes, we will update the "Last updated" date at the top of this page. Continued use of the app after changes constitutes acceptance of the updated policy. We encourage you to check this page occasionally.</p>
+    </section>
+
+    <hr class="page-divider">
+
+    <!-- ════════════════════════════════════════════
+         TERMS OF SERVICE
+    ═════════════════════════════════════════════ -->
+    <section class="doc-section" id="terms">
+        <h2 class="doc-section-title">Terms of Service</h2>
+        <p class="doc-meta">Effective date: April 23, 2026 &nbsp;·&nbsp; Last updated: April 23, 2026</p>
+
+        <p>These Terms of Service ("Terms") govern your use of the storynest mobile application ("the App"). By downloading or using the App, you agree to these Terms. If you do not agree, please do not use the App.</p>
+
+        <h3>1. Acceptance of Terms</h3>
+        <p>These Terms form a binding agreement between you and Kennedy Anderson ("Developer," "we," "us"). They apply to all users of storynest, including parents, caregivers, and any other adult who installs or operates the App.</p>
+
+        <h3>2. Eligibility</h3>
+        <p>You must be at least 13 years old to use storynest. To purchase a premium subscription, you must be at least 18 years old (or have parental consent) and must have the legal authority to enter into a binding contract in your jurisdiction. The App is intended for use by parents and caregivers on behalf of their children — it is not designed for use by children independently.</p>
+
+        <h3>3. Voice Recording — Consent &amp; Permitted Use</h3>
+        <div class="callout callout-warning">
+            <p><strong>You may only record your own voice.</strong> Recording the voice of another person without their explicit consent is a violation of these Terms and may be unlawful in your jurisdiction.</p>
+        </div>
+        <p>By recording your voice in storynest, you:</p>
+        <ul>
+            <li>Confirm that the voice recorded is your own, or that you have explicit consent from the person whose voice you are recording.</li>
+            <li>Consent to your voice recording being transmitted to ElevenLabs for the purpose of creating a voice model to narrate stories.</li>
+            <li>Understand that ElevenLabs will process your voice data under their own terms and privacy policy.</li>
+            <li>Agree that the resulting voice clone will only be used within the storynest app to narrate children's stories for personal, non-commercial use.</li>
+        </ul>
+        <p>You may not use storynest to clone or replicate the voice of any public figure, celebrity, or other individual without proper authorization.</p>
+
+        <h3>4. License to Use the App</h3>
+        <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use storynest on your personal iOS device for personal, non-commercial purposes, subject to these Terms. You may not:</p>
+        <ul>
+            <li>Copy, modify, distribute, or create derivative works of the App.</li>
+            <li>Reverse-engineer or attempt to extract the source code of the App.</li>
+            <li>Use the App for any unlawful purpose.</li>
+            <li>Sell, sublicense, or otherwise transfer your rights to use the App.</li>
+        </ul>
+
+        <h3>5. Content &amp; Stories</h3>
+        <p>storynest provides access to public domain children's stories (such as works by Hans Christian Andersen, the Brothers Grimm, and similar authors whose works are no longer under copyright). We do not claim ownership over these source texts.</p>
+        <p>The audio narrations you generate are created using your voice and are stored locally on your device. You retain ownership of any recordings you create. By using the App, you grant us no rights to your generated narrations.</p>
+
+        <h3>6. Subscription &amp; Billing</h3>
+        <p>storynest offers a premium subscription ("storynest Premium") that unlocks additional features.</p>
+        <ul>
+            <li><strong>Price:</strong> $2.99 USD per month (pricing may vary by region and is subject to change).</li>
+            <li><strong>Billing:</strong> All billing is handled by Apple through the App Store. We do not process payments directly.</li>
+            <li><strong>Free trial:</strong> Where offered, a free trial will be noted in the App Store listing. After the trial, the subscription auto-renews at the stated price.</li>
+            <li><strong>Cancellation:</strong> You may cancel your subscription at any time through your Apple ID settings (Settings → [Your Name] → Subscriptions). Cancellation takes effect at the end of the current billing period; you retain access to premium features until then.</li>
+            <li><strong>Refunds:</strong> Refund requests are handled by Apple in accordance with their refund policy. We do not issue refunds directly.</li>
+            <li><strong>Free tier:</strong> Non-subscribers may create up to 3 voice narrations at no cost, with unlimited playback of created stories.</li>
+        </ul>
+
+        <h3>7. Acceptable Use</h3>
+        <p>You agree not to use storynest to:</p>
+        <ul>
+            <li>Generate content that is harmful, abusive, obscene, or inappropriate for children.</li>
+            <li>Impersonate any person or entity.</li>
+            <li>Clone another person's voice without their explicit consent.</li>
+            <li>Attempt to probe, scan, or test the vulnerability of the App or its connected systems.</li>
+            <li>Circumvent any access controls or limitations built into the App.</li>
+            <li>Violate any applicable law or regulation.</li>
+        </ul>
+
+        <h3>8. Third-Party Services</h3>
+        <p>The App integrates with ElevenLabs and Apple's in-app purchase infrastructure. These third-party services have their own terms and privacy policies. We are not responsible for the practices, availability, or terms of third-party services. Your use of those services is subject to their respective agreements.</p>
+
+        <h3>9. Intellectual Property</h3>
+        <p>The storynest name, logo, app design, and original content are owned by Kennedy Anderson. All rights not expressly granted in these Terms are reserved. The public domain stories accessed through the App are not owned by us and are freely available under applicable copyright law.</p>
+
+        <h3>10. Disclaimers</h3>
+        <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.</p>
+        <p>Voice cloning quality varies and is dependent on ElevenLabs' AI technology, which we do not control. We make no guarantee as to the accuracy, quality, or suitability of generated narrations.</p>
+
+        <h3>11. Limitation of Liability</h3>
+        <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, KENNEDY ANDERSON WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF OR INABILITY TO USE THE APP, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR TOTAL LIABILITY TO YOU FOR ANY CAUSE OF ACTION SHALL NOT EXCEED THE AMOUNT YOU PAID FOR THE APP IN THE 12 MONTHS PRECEDING THE CLAIM.</p>
+        <p>Some jurisdictions do not allow the exclusion of certain warranties or limitation of liability, so the above may not apply to you.</p>
+
+        <h3>12. Indemnification</h3>
+        <p>You agree to indemnify and hold harmless Kennedy Anderson from any claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from your use of the App, your violation of these Terms, or your violation of any rights of a third party.</p>
+
+        <h3>13. Termination</h3>
+        <p>We reserve the right to terminate or suspend your access to the App at any time, without prior notice, if we believe you have violated these Terms. Upon termination, the license granted herein immediately ceases. All provisions of these Terms that by their nature should survive termination (including disclaimers and limitation of liability) will survive.</p>
+
+        <h3>14. Governing Law</h3>
+        <p>These Terms are governed by the laws of the State of California, United States, without regard to conflict-of-law principles. Any disputes arising from these Terms or your use of the App shall be resolved in the courts located in California, and you consent to the exclusive jurisdiction of those courts.</p>
+
+        <h3>15. Changes to These Terms</h3>
+        <p>We may update these Terms from time to time. We will update the "Last updated" date at the top of this page when we do. Your continued use of the App after changes constitutes acceptance of the revised Terms. If you disagree with a change, your remedy is to discontinue using the App.</p>
+
+        <h3>16. Contact</h3>
+        <p>For questions about these Terms, please email us at <a href="mailto:storynest.hello@gmail.com">storynest.hello@gmail.com</a>.</p>
+    </section>
+
+    <hr class="page-divider">
+
+    <!-- ════════════════════════════════════════════
+         CONTACT
+    ═════════════════════════════════════════════ -->
+    <section class="doc-section" id="contact">
+        <h2 class="doc-section-title">Contact Us</h2>
+        <p>Have a question about your privacy, a data request, or anything else? We're happy to help.</p>
+
+        <div class="contact-card">
+            <p><strong>App:</strong> storynest</p>
+            <p><strong>Developer:</strong> Kennedy Anderson</p>
+            <p><strong>Email:</strong> <a href="mailto:storynest.hello@gmail.com">storynest.hello@gmail.com</a></p>
+            <p style="margin-top:16px; color: rgba(247,244,213,0.65); font-size:0.9rem;">We aim to respond to all inquiries within 2–3 business days.</p>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 storynest &nbsp;·&nbsp; <a href="#privacy">Privacy Policy</a> &nbsp;·&nbsp; <a href="#terms">Terms of Service</a></p>
+    <p style="margin-top:8px;">Made with 🌙 for families everywhere</p>
+</footer>
+
 </body>
 </html>
